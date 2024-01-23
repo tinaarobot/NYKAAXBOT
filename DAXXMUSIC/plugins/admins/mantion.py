@@ -6,7 +6,7 @@ from pyrogram import filters
 SPAM_CHATS = []
 
 
-@app.on_message(filters.command(["mantion", "utag"]) | filters.command("@utag", "") & filters.group)
+@app.on_message(filters.command(["mantion"]) | filters.command("@utag", "") & filters.group)
 async def tag_all_users(_,message): 
     replied = message.reply_to_message  
     if len(message.command) < 2 and not replied:
