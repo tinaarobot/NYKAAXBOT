@@ -9,7 +9,6 @@ from pytgcalls.types import AudioVideoPiped
 from DAXXMUSIC.plugins.play import play
 from DAXXMUSIC.plugins.play.pornplay import play
 
-
 #
 #####
 
@@ -24,7 +23,7 @@ keyboard = InlineKeyboardMarkup([
 
 # Define your callback function
 @app.on_callback_query(filters.regex("^play"))
-async def play_callback(_, query: CallbackQuery):
+async def play_callback(_, query):
     # You can add more logic here before initiating playback
     await play(query.from_user.id)  # Assuming play function accepts user ID
     await query.answer("Playback started!")
