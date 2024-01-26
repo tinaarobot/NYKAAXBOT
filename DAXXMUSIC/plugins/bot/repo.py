@@ -8,13 +8,15 @@ start_txt = """**
 
 ✦ ɪ ᴀᴍ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗
 
+✦ ᴛʜɪs ɪs ɴʏᴋᴀᴀ ᴍᴜsɪᴄ ʙᴏᴛ ᴏғғɪᴄɪᴀʟ ʀᴇᴘᴏ.
+
 ✦ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗ ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
 **"""
 
 
 
 
-@app.on_message(filters.command("nykaa"))
+@app.on_message(filters.command("repo"))
 async def start(_, msg):
     buttons = [
         [ 
@@ -22,14 +24,14 @@ async def start(_, msg):
         ],
         [
           InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url="https://t.me/the_friendz"),
-          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://t.me/iam_daxx"),
+          InlineKeyboardButton("ʀᴇᴘᴏ", url="https://github.com/anujkumarroy/ROYMUSIC"),
           ],
     ]
     
     reply_markup = InlineKeyboardMarkup(buttons)
     
     await msg.reply_photo(
-        photo="https://telegra.ph/file/faa1f3ad7116e33d9f402.jpg",
+        photo="https://graph.org/file/33bc093c89898dcc318ae.jpg",
         caption=start_txt,
         reply_markup=reply_markup
     )
