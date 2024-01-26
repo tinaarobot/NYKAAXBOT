@@ -47,3 +47,6 @@ lexica-api==1.4.7
 httpx==0.25.2
 gpytranslate
 openai==0.28.0
+img2pdf
+pickledb
+python-telegram-bot==20.7
