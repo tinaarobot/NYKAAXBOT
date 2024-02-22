@@ -21,6 +21,7 @@ from pyrogram.enums import ChatType
 from pyrogram.types import InlineKeyboardMarkup, Message
 
 
+
 mongo_client = MongoClient(MONGO_DB_URI)
 db = mongo_client["natu_rankings"]
 collection = db["ranking"]
@@ -29,7 +30,26 @@ user_data = {}
 
 today = {}
 
-pic = "https://graph.org/file/077a019888295c97f31e7.jpg"
+MISHI = [
+    "https://graph.org/file/f86b71018196c5cfe7344.jpg",
+    "https://graph.org/file/a3db9af88f25bb1b99325.jpg",
+    "https://graph.org/file/5b344a55f3d5199b63fa5.jpg",
+    "https://graph.org/file/84de4b440300297a8ecb3.jpg",
+    "https://graph.org/file/84e84ff778b045879d24f.jpg",
+    "https://graph.org/file/a4a8f0e5c0e6b18249ffc.jpg",
+    "https://graph.org/file/ed92cada78099c9c3a4f7.jpg",
+    "https://graph.org/file/d6360613d0fa7a9d2f90b.jpg"
+    "https://graph.org/file/37248e7bdff70c662a702.jpg",
+    "https://graph.org/file/0bfe29d15e918917d1305.jpg",
+    "https://graph.org/file/16b1a2828cc507f8048bd.jpg",
+    "https://graph.org/file/e6b01f23f2871e128dad8.jpg",
+    "https://graph.org/file/cacbdddee77784d9ed2b7.jpg",
+    "https://graph.org/file/ddc5d6ec1c33276507b19.jpg",
+    "https://graph.org/file/39d7277189360d2c85b62.jpg",
+    "https://graph.org/file/5846b9214eaf12c3ed100.jpg",
+    "https://graph.org/file/ad4f9beb4d526e6615e18.jpg",
+    "https://graph.org/file/3514efaabe774e4f181f2.jpg",
+]
 
 
 #watcher
@@ -67,23 +87,23 @@ async def today_(_, message):
         sorted_users_data = sorted(users_data, key=lambda x: x[1], reverse=True)[:10]
 
         if sorted_users_data:
-            response = "**📈 LEADERBOARD TODAY**\n"
+            response = "**✦ 📈 ᴛᴏᴅᴀʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ**\n\n"
             for idx, (user_id, total_messages) in enumerate(sorted_users_data, start=1):
                 try:
                     user_name = (await app.get_users(user_id)).first_name
                 except:
                     user_name = "Unknown"
-                user_info = f"**{idx}**. {user_name} • {total_messages}\n"
+                user_info = f"**{idx}**.   {user_name} ➠ {total_messages}\n"
                 response += user_info
             button = InlineKeyboardMarkup(
                 [[    
-                   InlineKeyboardButton("OVERALL", callback_data="overall"),
+                   InlineKeyboardButton("ᴏᴠᴇʀᴀʟʟ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ", callback_data="overall"),
                 ]])
-            await message.reply_photo(photo=pic, caption=response, reply_markup=button)
+            await message.reply_photo(random.choice(MISHI), caption=response, reply_markup=button)
         else:
-            await message.reply_text("No data available for today.")
+            await message.reply_text("❅ ɴᴏ ᴅᴀᴛᴀ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛᴏᴅᴀʏ.")
     else:
-        await message.reply_text("No data available for today.")
+        await message.reply_text("❅ ɴᴏ ᴅᴀᴛᴀ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛᴏᴅᴀʏ.")
 
 
 
@@ -91,7 +111,7 @@ async def today_(_, message):
 async def ranking(_, message):
     top_members = collection.find().sort("total_messages", -1).limit(10)
 
-    response = "**📈 LEADERBOARD**\n"
+    response = "**✦ 📈 ᴄᴜʀʀᴇɴᴛ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ**\n\n"
     for idx, member in enumerate(top_members, start=1):
         user_id = member["_id"]
         total_messages = member["total_messages"]
@@ -100,13 +120,13 @@ async def ranking(_, message):
         except:
             user_name = "Unknown"
 
-        user_info = f"**{idx}**. {user_name} • {total_messages}\n"
+        user_info = f"**{idx}**.   {user_name} ➠ {total_messages}\n"
         response += user_info 
     button = InlineKeyboardMarkup(
             [[    
-               InlineKeyboardButton("TODAY", callback_data="today"),
+               InlineKeyboardButton("ᴛᴏᴅᴀʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ", callback_data="today"),
             ]])
-    await message.reply_photo(photo=pic, caption=response, reply_markup=button)
+    await message.reply_photo(random.choice(MISHI), caption=response, reply_markup=button)
 
 
 
@@ -120,23 +140,23 @@ async def today_rank(_, query):
         sorted_users_data = sorted(users_data, key=lambda x: x[1], reverse=True)[:10]
 
         if sorted_users_data:
-            response = "**📈 LEADERBOARD TODAY**\n"
+            response = "**✦ 📈 ᴛᴏᴅᴀʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ**\n\n"
             for idx, (user_id, total_messages) in enumerate(sorted_users_data, start=1):
                 try:
                     user_name = (await app.get_users(user_id)).first_name
                 except:
                     user_name = "Unknown"
-                user_info = f"**{idx}**. {user_name} • {total_messages}\n"
+                user_info = f"**{idx}**.   {user_name} ➠ {total_messages}\n"
                 response += user_info
             button = InlineKeyboardMarkup(
                 [[    
-                   InlineKeyboardButton("OVERALL", callback_data="overall"),
+                   InlineKeyboardButton("ᴏᴠᴇʀᴀʟʟ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ", callback_data="overall"),
                 ]])
             await query.message.edit_text(response, reply_markup=button)
         else:
-            await query.answer("No data available for today.")
+            await query.answer("❅ ɴᴏ ᴅᴀᴛᴀ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛᴏᴅᴀʏ.")
     else:
-        await query.answer("No data available for today.")
+        await query.answer("❅ ɴᴏ ᴅᴀᴛᴀ ᴀᴠᴀɪʟᴀʙʟᴇ ғᴏʀ ᴛᴏᴅᴀʏ.")
 
 
 
@@ -144,7 +164,7 @@ async def today_rank(_, query):
 async def overall_rank(_, query):
     top_members = collection.find().sort("total_messages", -1).limit(10)
 
-    response = "**📈 LEADERBOARD**\n"
+    response = "**✦ 📈 ᴏᴠᴇʀᴀʟʟ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ**\n\n"
     for idx, member in enumerate(top_members, start=1):
         user_id = member["_id"]
         total_messages = member["total_messages"]
@@ -153,10 +173,10 @@ async def overall_rank(_, query):
         except:
             user_name = "Unknown"
 
-        user_info = f"**{idx}**. {user_name} • {total_messages}\n"
+        user_info = f"**{idx}**.   {user_name} ➠ {total_messages}\n"
         response += user_info 
     button = InlineKeyboardMarkup(
             [[    
-               InlineKeyboardButton("TODAY", callback_data="today"),
+               InlineKeyboardButton("ᴛᴏᴅᴀʏ ʟᴇᴀᴅᴇʀʙᴏᴀʀᴅ", callback_data="today"),
             ]])
     await query.message.edit_text(response, reply_markup=button)
