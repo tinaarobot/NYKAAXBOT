@@ -13,11 +13,13 @@
   <img src="https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg">
 </p>
 
-<img src="https://readme-typing-svg.herokuapp.com?color=FFFF00&width=420&lines=💌+ɪ+ᴀᴍ+⚘+ɴʏᴋᴀᴀ+ᴍᴜsɪᴄ+₰+ᴀɴᴅ+ɪ+ʜᴀᴠᴇ+sᴘᴇᴄɪᴀʟ+ғᴜᴛᴜʀᴇs+🧋;💌+ғʀɪsᴛ+ʏᴏᴜ+ғᴏʀᴋ+ᴛʜɪs+ʀᴇᴘᴏ+ᴛʜᴇɴ+ᴅᴇᴘʟᴏʏ+ʏᴏᴜʀ+ʙᴏᴛ+🧋">
+<img src="https://readme-typing-svg.herokuapp.com?color=FF00FF&width=420&lines=💌+ɪ+ᴀᴍ+⚘+ɴʏᴋᴀᴀ+ᴍᴜsɪᴄ+₰+ᴀɴᴅ+ɪ+ʜᴀᴠᴇ+sᴘᴇᴄɪᴀʟ+ғᴜᴛᴜʀᴇs+🧋;💌+ғʀɪsᴛ+ʏᴏᴜ+ғᴏʀᴋ+ᴛʜɪs+ʀᴇᴘᴏ+ᴛʜᴇɴ+ᴅᴇᴘʟᴏʏ+ʏᴏᴜʀ+ʙᴏᴛ+🧋">
 
 
 
-※ ᴛᴇxᴛ ʙᴏᴛ ➛ [‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)
+※ ᴛᴇxᴛ ʙᴏᴛ ➠
+</h3>
+[‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)
 
 
  <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+🄷🄰🄿🄰🅈+🄷🄾🄻🄸+♥︎">
