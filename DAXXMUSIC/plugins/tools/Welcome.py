@@ -43,10 +43,10 @@ def welcomepic(pic, user, chat, id, uname):
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=125)
     font2 = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=90)
-    draw.text((400, 830), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
-    draw.text((400, 1070), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((400, 1290), f"USERNAME : {uname}", fill=(255,255,255),font=font)
-    pfp_position = (1200, 520)  
+    draw.text((400, 200), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
+    draw.text((400, 670), f'ID: {id}', fill=(255, 255, 255), font=font)
+    draw.text((400, 180), f"USERNAME : {uname}", fill=(255,255,255),font=font)
+    pfp_position = (980, 30)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
