@@ -8,8 +8,12 @@ from DAXXMUSIC import app
 def help_pannel(_, START: Union[bool, int] = None):
     first = [InlineKeyboardButton(text=_["CLOSE_BUTTON"], callback_data=f"close")]
     second = [
+InlineKeyboardButton(
+text=_["BACK_BUTTON"]
+callback_data="settingsback_helper",
+),
         InlineKeyboardButton(
-            text=_["BACK_BUTTON"],
+            text=_["CLOSE_BUTTON"],
             callback_data=f"close",
         ),
     ]
