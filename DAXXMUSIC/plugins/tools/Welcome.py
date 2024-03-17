@@ -45,8 +45,8 @@ def welcomepic(pic, user, chat, id, uname):
     font2 = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=90)
     draw.text((70, 250), f'NAME: {unidecode(user)}', fill=(255, 0, 255), font=font)
     draw.text((70, 340), f'ID: {id}', fill=(255, 0, 255), font=font)
-    draw.text((70, 410), f"USERNAME : {uname}", fill=(255,0,255),font=font)
-    pfp_position = (745, 130)  
+    draw.text((70, 430), f"USERNAME : {uname}", fill=(255,0,255),font=font)
+    pfp_position = (744, 129)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
