@@ -9,16 +9,7 @@ from pyrogram.types import *
 from typing import Union, Optional
 import random
 
-random_photo = [
-"https://graph.org/file/f86b71018196c5cfe7344.jpg",
-"https://graph.org/file/a3db9af88f25bb1b99325.jpg",
-"https://graph.org/file/5b344a55f3d5199b63fa5.jpg",
-"https://graph.org/file/84de4b440300297a8ecb3.jpg",
-"https://graph.org/file/84e84ff778b045879d24f.jpg",
-"https://graph.org/file/a4a8f0e5c0e6b18249ffc.jpg",
-"https://graph.org/file/ed92cada78099c9c3a4f7.jpg",
-"https://graph.org/file/d6360613d0fa7a9d2f90b.jpg"
-]
+
 
 # --------------------------------------------------------------------------------- #
 
@@ -49,18 +40,12 @@ async def get_userinfo_img(
 
         circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
         circular_img.paste(img, (0, 0), mask)
-        resized = circular_img.resize((400, 400))
-        bg.paste(resized, (440, 160), resized)
+        resized = circular_img.resize((480, 480))
+        bg.paste(resized, (724, 120), resized)
 
     img_draw = ImageDraw.Draw(bg)
 
-    img_draw.text(
-        (529, 627),
-        text=str(user_id).upper(),
-        font=get_font(46, font_path),
-        fill=(255, 255, 255),
-    )
-
+    
 
     path = f"./userinfo_img_{user_id}.png"
     bg.save(path)
@@ -69,7 +54,7 @@ async def get_userinfo_img(
 
 # --------------------------------------------------------------------------------- #
 
-bg_path = "DAXXMUSIC/assets/userinfo.png"
+bg_path = "DAXXMUSIC/assets/INFORMATION2.PNG"
 font_path = "DAXXMUSIC/assets/hiroko.ttf"
 
 # --------------------------------------------------------------------------------- #
