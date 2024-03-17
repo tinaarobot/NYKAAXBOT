@@ -214,7 +214,7 @@ HELP_23 = """
 
  ❍ sᴘᴇᴄɪᴀʟ ᴄᴏᴍᴍᴀɴᴅs ➠ Nykaa 𝚋𝚊𝚗 , Nykaa 𝚖𝚞𝚝𝚎 , Nykaa 𝚙𝚛𝚘𝚖𝚘𝚝𝚎 ..... 𝚎𝚝𝚌.
  """
- HELP_24 = """
+HELP_24 = """
  ✽ <b>sᴇᴀʀᴄʜ ⏤͟͟͞͞★</b>
 
  ❍ /google <query> ➠ Search the google for the given query.
@@ -222,3 +222,4 @@ HELP_23 = """
  ❍ /stack <query>  ➠ Search stackoverflow for the given query.
  ❍ /image (/imgs) <query> ➠ Get the images regarding to your query
 """
+
