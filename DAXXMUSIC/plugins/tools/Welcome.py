@@ -8,10 +8,8 @@ from DAXXMUSIC import LOGGER
 from pyrogram.types import Message
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC import app
-from DAXXMUSIC.CuteDb. import *
+from DAXXMUSIC.CuteDb.Weldb import *
 from config import LOG_GROUP_ID
-from CUTEXMUSIC.utils.database.shalu_ban import admin_filter
-
 
 LOGGER = getLogger(__name__)
 
@@ -36,70 +34,58 @@ def circle(pfp, size=(450, 450)):
     return pfp
 
 def welcomepic(pic, user, chat, id, uname):
-    background = Image.open("assets/WELCOME.PNG")
+    background = Image.open("DAXXMUSIC/assets/WELCOME2.PNG")
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
         (1180, 1180)
     ) 
     draw = ImageDraw.Draw(background)
-    font = ImageFont.truetype('assets/font.ttf', size=125)
-    font2 = ImageFont.truetype('assets/font.ttf', size=90)
-    draw.text((1740, 830), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
-    draw.text((1740, 1070), f'ID: {id}', fill=(255, 255, 255), font=font)
-    draw.text((1740, 1290), f"USERNAME : {uname}", fill=(255,255,255),font=font)
-    pfp_position = (230, 520)  
+    font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=125)
+    font2 = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=90)
+    draw.text((400, 830), f'NAME: {unidecode(user)}', fill=(255, 255, 255), font=font)
+    draw.text((400, 1070), f'ID: {id}', fill=(255, 255, 255), font=font)
+    draw.text((400, 1290), f"USERNAME : {uname}", fill=(255,255,255),font=font)
+    pfp_position = (1200, 520)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
     )
     return f"downloads/welcome#{id}.png"
 
-SPECIAL_WELCOME_USER_IDS = {6761639198, 6957337656}
 
-@app.on_message(filters.command(["wel", "swel", "Welcome"]) & ~filters.private)
+
+@app.on_message(filters.command("swel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n/wel [ENABLE|DISABLE]"
+    usage = "**Usage:**\n/swel [ENABLE|DISABLE]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
-
     chat_id = message.chat.id
-    user_id = message.from_user.id
-
-    if user_id in SPECIAL_WELCOME_USER_IDS:
-        state = message.text.split(None, 1)[1].strip().lower()
-        if state == "enable":
-            await add_wlcm(chat_id)
-            await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
-        elif state == "disable":
-            await rm_wlcm(chat_id)
-            await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
-        else:
-            await message.reply_text(usage)
-
+    user = await app.get_chat_member(message.chat.id, message.from_user.id)
+    if user.status in (
+        enums.ChatMemberStatus.ADMINISTRATOR,
+        enums.ChatMemberStatus.OWNER,
+    ):
+      A = await wlcm.find_one({"chat_id" : chat_id})
+      state = message.text.split(None, 1)[1].strip()
+      state = state.lower()
+      if state == "enable":
+        if A:
+           return await message.reply_text("Special Welcome Already Enabled")
+        elif not A:
+           await add_wlcm(chat_id)
+           await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
+      elif state == "disable":
+        if not A:
+           return await message.reply_text("Special Welcome Already Disabled")
+        elif A:
+           await rm_wlcm(chat_id)
+           await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
+      else:
+        await message.reply_text(usage)
     else:
-        user = await app.get_chat_member(chat_id, user_id)
-        if user.status in (enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER):
-            A = await wlcm.find_one({"chat_id": chat_id})
-            state = message.text.split(None, 1)[1].strip().lower()
-            if state == "enable":
-                if A:
-                    return await message.reply_text("Special Welcome Already Enabled")
-                else:
-                    await add_wlcm(chat_id)
-                    await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
-            elif state == "disable":
-                if not A:
-                    return await message.reply_text("Special Welcome Already Disabled")
-                else:
-                    await rm_wlcm(chat_id)
-                    await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
-            else:
-                await message.reply_text(usage)
-        else:
-            await message.reply("Only Admins Can Use This Command")
-
-
+        await message.reply("Only Admins Can Use This Command")
+    
 #bhag 
 
 @app.on_chat_member_updated(filters.group, group=-3)
