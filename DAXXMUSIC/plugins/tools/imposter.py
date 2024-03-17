@@ -30,8 +30,8 @@ ROY = [
     [
         InlineKeyboardButton(
             text="ᴀᴅᴅ ᴍᴇ",
-            url=f"https://t.me/sinewyxbot?startgroup=true"),
-        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/SiNeWyuPt")
+            url=f"https://t.me/nykaaxbot?startgroup=true"),
+        InlineKeyboardButton(text="ᴜᴘᴅᴀᴛᴇ", url=f"https://t.me/roy_editx")
     ],
 ]
 
@@ -55,23 +55,23 @@ async def chk_usr(_, message: Message):
         or lastname_before != message.from_user.last_name
     ):
         msg += f"""
-**♥︎ ᴜsᴇʀ sʜᴏʀᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ♥︎**
+**✽ ᴜsᴇʀ sʜᴏʀᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ✽**
 
-**๏ ɴᴀᴍᴇ** ➛ {message.from_user.mention}
-**๏ ᴜsᴇʀ ɪᴅ** ➛ {message.from_user.id}
+**๏ ɴᴀᴍᴇ** ➠ {message.from_user.mention}
+**๏ ᴜsᴇʀ ɪᴅ** ➠ {message.from_user.id}
 """
     if usernamebefore != message.from_user.username:
-        usernamebefore = f"@{usernamebefore}" if usernamebefore else "NO USERNAME"
+        usernamebefore = f"@{usernamebefore}" if usernamebefore else "ɴᴏ ᴜsᴇʀɴᴀᴍᴇ"
         usernameafter = (
             f"@{message.from_user.username}"
             if message.from_user.username
             else "NO USERNAME"
         )
         msg += """
-**♥︎ ᴄʜᴀɴɢᴇᴅ ᴜsᴇʀɴᴀᴍᴇ ♥︎**
+**❅ ᴄʜᴀɴɢᴇᴅ ᴜsᴇʀɴᴀᴍᴇ ⏤͟͟͞͞★**
 
-**๏ ʙᴇғᴏʀᴇ** ➛ {bef}
-**๏ ᴀғᴛᴇʀ** ➛ {aft}
+**๏ ʙᴇғᴏʀᴇ** ➠ {bef}
+**๏ ᴀғᴛᴇʀ** ➠ {aft}
 """.format(bef=usernamebefore, aft=usernameafter)
         await add_userdata(
             message.from_user.id,
@@ -81,10 +81,10 @@ async def chk_usr(_, message: Message):
         )
     if first_name != message.from_user.first_name:
         msg += """
-**♥︎ ᴄʜᴀɴɢᴇs ғɪʀsᴛ ɴᴀᴍᴇ ♥︎**
+**❅ ᴄʜᴀɴɢᴇs ғɪʀsᴛ ɴᴀᴍᴇ ⏤͟͟͞͞★**
 
-**๏ ʙᴇғᴏʀᴇ** ➛ {bef}
-**๏ ᴀғᴛᴇʀ** ➛ {aft}
+**๏ ʙᴇғᴏʀᴇ** ➠ {bef}
+**๏ ᴀғᴛᴇʀ** ➠ {aft}
 """.format(
             bef=first_name, aft=message.from_user.first_name
         )
@@ -95,13 +95,13 @@ async def chk_usr(_, message: Message):
             message.from_user.last_name,
         )
     if lastname_before != message.from_user.last_name:
-        lastname_before = lastname_before or "NO LAST NAME"
-        lastname_after = message.from_user.last_name or "NO LAST NAME"
+        lastname_before = lastname_before or "ɴᴏ ʟᴀsᴛ ɴᴀᴍᴇ"
+        lastname_after = message.from_user.last_name or "ɴᴏ ʟᴀsᴛ ɴᴀᴍᴇ"
         msg += """
-**♥︎ ᴄʜᴀɴɢᴇs ʟᴀsᴛ ɴᴀᴍᴇ ♥︎**
+**❅ ᴄʜᴀɴɢᴇs ʟᴀsᴛ ɴᴀᴍᴇ ⏤͟͟͞͞★**
 
-**๏ ʙᴇғᴏʀᴇ** ➛ {bef}
-**๏ ᴀғᴛᴇʀ** ➛ {aft}
+**๏ ʙᴇғᴏʀᴇ** ➠ {bef}
+**๏ ᴀғᴛᴇʀ** ➠ {aft}
 """.format(
             bef=lastname_before, aft=lastname_after
         )
@@ -118,22 +118,22 @@ async def chk_usr(_, message: Message):
 @app.on_message(filters.group & filters.command("imposter") & ~filters.bot & ~filters.via_bot)
 async def set_mataa(_, message: Message):
     if len(message.command) == 1:
-        return await message.reply("**ᴅᴇᴛᴇᴄᴛ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴜsᴇʀs ᴜsᴀɢᴇ : ᴘʀᴇᴛᴇɴᴅᴇʀ ᴏɴ|ᴏғғ**")
+        return await message.reply("**✦ ᴅᴇᴛᴇᴄᴛ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴜsᴇʀs ᴜsᴀɢᴇ ➠ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴏɴ|ᴏғғ**")
     if message.command[1] == "enable":
         cekset = await impo_on(message.chat.id)
         if cekset:
-            await message.reply("**ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ.**")
+            await message.reply("**✦ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ.**")
         else:
             await impo_on(message.chat.id)
-            await message.reply(f"**sᴜᴄᴄᴇssғᴜʟʟʏ ᴇɴᴀʙʟᴇᴅ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ғᴏʀ** {message.chat.title}")
+            await message.reply(f"**✦ sᴜᴄᴄᴇssғᴜʟʟʏ ᴇɴᴀʙʟᴇᴅ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ғᴏʀ** {message.chat.title}")
     elif message.command[1] == "disable":
         cekset = await impo_off(message.chat.id)
         if not cekset:
-            await message.reply("**ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ.**")
+            await message.reply("**✦ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ɪs ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ.**")
         else:
             await impo_off(message.chat.id)
-            await message.reply(f"**sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴀʙʟᴇᴅ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ғᴏʀ** {message.chat.title}")
+            await message.reply(f"**✦ sᴜᴄᴄᴇssғᴜʟʟʏ ᴅɪsᴀʙʟᴇᴅ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴍᴏᴅᴇ ғᴏʀ** {message.chat.title}")
     else:
-        await message.reply("**ᴅᴇᴛᴇᴄᴛ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴜsᴇʀs ᴜsᴀɢᴇ : ᴘʀᴇᴛᴇɴᴅᴇʀ ᴏɴ|ᴏғғ**")
+        await message.reply("**✦ ᴅᴇᴛᴇᴄᴛ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴜsᴇʀs ᴜsᴀɢᴇ ➠ ᴘʀᴇᴛᴇɴᴅᴇʀ ᴏɴ|ᴏғғ**")
 
     
