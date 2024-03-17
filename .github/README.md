@@ -17,9 +17,7 @@
 
 
 
-※ ᴛᴇxᴛ ʙᴏᴛ ➠
-</h3>
-[‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)
+※ ᴛᴇxᴛ ʙᴏᴛ ➠ [‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)
 
 
  <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+🄷🄰🄿🄰🅈+🄷🄾🄻🄸+♥︎">
