@@ -1,4 +1,4 @@
-pyrogram import Client, filters
+from pyrogram import Client, filters
 from pyrogram.types import Message
 from datetime import datetime
 from DAXXMUSIC import app
