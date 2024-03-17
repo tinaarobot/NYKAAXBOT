@@ -9,7 +9,7 @@ from pyrogram.types import Message
 from DAXXMUSIC.misc import SUDOERS
 from DAXXMUSIC import app
 from DAXXMUSIC.CutDb.Weldb import *
-from config import LOG_GROUP_ID
+from config import LOGGER_ID
 
 LOGGER = getLogger(__name__)
 
