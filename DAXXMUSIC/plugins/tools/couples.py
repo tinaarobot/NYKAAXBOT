@@ -4,12 +4,22 @@ from datetime import datetime
 from telegraph import upload_file
 from PIL import Image , ImageDraw
 from pyrogram import *
-from pyrogram.types import *
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import *
 
 #BOT FILE NAME
 from DAXXMUSIC import app as app
 from DAXXMUSIC.mongo.couples_db import _get_image, get_couple
+
+POLICE = [
+    [
+        InlineKeyboardButton(
+            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
+            url=f"https://t.me/nykaaxbot?startgroup=true",
+        ),
+    ],
+]
+
 
 def dt():
     now = datetime.now()
@@ -96,14 +106,15 @@ async def ctest(_, message):
          img.save(f'test_{cid}.png')
     
          TXT = f"""
-**ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ :
+**❅ ᴛᴏᴅᴀʏ's ᴄᴏᴜᴘʟᴇ ᴏғ ᴛʜᴇ ᴅᴀʏ ⏤͟͟͞͞★
 
-{N1} + {N2} = 💚
+ {N1} + {N2} = 💌
 
-ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs ᴡɪʟʟ ʙᴇ sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !!**
+❅ ɴᴇxᴛ ᴄᴏᴜᴘʟᴇs sᴇʟᴇᴄᴛᴇᴅ ᴏɴ {tomorrow} !**
 """
     
-         await message.reply_photo(f"test_{cid}.png", caption=TXT)
+         await message.reply_photo(f"test_{cid}.png", caption=TXT, reply_markup=InlineKeyboardMarkup(POLICE),
+    )
          await msg.delete()
          a = upload_file(f"test_{cid}.png")
          for x in a:
@@ -139,9 +150,9 @@ async def ctest(_, message):
        pass
          
 
-__mod__ = "COUPLES"
+__mod__ = "ᴄᴏᴜᴘʟᴇ"
 __help__ = """
-**» /couples** - Get Todays Couples Of The Group In Interactive View
+**✦ /couples** - Get Todays Couples Of The Group In Interactive View
 """
 
 
