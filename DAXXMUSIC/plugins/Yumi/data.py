@@ -47,22 +47,23 @@ def generate_info(client, message):
 
     # Create a message with the fake data
     info_message = (
-        f"**๏ ғᴜʟʟ ɴᴀᴍᴇ ➛** {name}\n"
+        f"**๏ ғᴜʟʟ ɴᴀᴍᴇ ➠** {name}\n"
         
-        f"**๏ ᴀᴅᴅʀᴇss ➛** {address}\n"
+        f"**๏ ᴀᴅᴅʀᴇss ➠** {address}\n"
         
-        f"**๏ ᴄᴏᴜɴᴛʀʏ ➛** {country}\n"
+        f"**๏ ᴄᴏᴜɴᴛʀʏ ➠** {country}\n"
         
-        f"**๏ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ➛** {phone_number}\n"
+        f"**๏ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ➠** {phone_number}\n"
         
-        f"**๏ ᴇᴍᴀɪʟ ➛** {email}\n"
+        f"**๏ ᴇᴍᴀɪʟ ➠** {email}\n"
         
-        f"**๏ ᴄɪᴛʏ ➛** {city}\n"
+        f"**๏ ᴄɪᴛʏ ➠** {city}\n"
         
-        f"**๏ sᴛᴀᴛᴇ ➛** {state}\n"
+        f"**๏ sᴛᴀᴛᴇ ➠** {state}\n"
         
-        f"**๏ ᴢɪᴘᴄᴏᴅᴇ ➛** {zipcode}"
-        
+        f"**๏ ᴢɪᴘᴄᴏᴅᴇ ➠** {zipcode}\n"
+
+        f"๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"
     )
 
     # Send the fake data to the user
