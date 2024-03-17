@@ -15,7 +15,7 @@ async def instatus(app, message):
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-        sent_message = await message.reply_text("ɢᴇᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...")
+        sent_message = await message.reply_text("✦ ɢᴇᴛᴛɪɴɢ ɪɴғᴏʀᴍᴀᴛɪᴏɴ...")
         deleted_acc = 0
         premium_acc = 0
         banned = 0
@@ -46,7 +46,7 @@ async def instatus(app, message):
 ๏ ᴘʀᴇᴍɪᴜᴍ ᴜsᴇʀs ➠ {premium_acc} 
 ๏ ᴛɪᴍᴇ ᴛᴀᴋᴇɴ ➠ {timelog} 
 
-๏ ᴍᴀᴅᴇ ʙʏ ➠ ʀᴏʏ-ᴇᴅɪᴛx **""")
+๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐ **""")
     else:
         sent_message = await message.reply_text("ONLY ADMINS CAN USE THIS !")
         await sleep(5)
