@@ -1,12 +1,12 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> 
  <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+ℍ𝔸ℙℙ𝕐+ℍ𝕆𝕃𝕀+♥︎">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
+
 
 
 <h2 align="center">
-    ᥫᩣ ─「 𝗡𝗬𝗞𝗔𝗔 𝗠𝗨𝗦𝗜𝗖 」─ ᥫᩣ
+    ♛ ─「 𝗡𝗬𝗞𝗔𝗔 𝗠𝗨𝗦𝗜𝗖 」─ ♛
 
- ⚘ ʜᴇʀᴏᴋᴜ + ᴠᴘs ⚘
+ 
 </h2>
 <img src="https://readme-typing-svg.herokuapp.com?color=FF0786&width=420&lines=Ⰶ+ʜᴇʏ+ᴄᴜᴛɪᴇ+ᴅᴇᴘʟᴏʏ+ʙᴏᴛ+ᴏɴ+ʜᴇʀᴏᴋᴜ+Ⰶ;Ⰶ+ɪғ+ʏᴏᴜ+ᴅᴏɴ'ᴛ+ʜᴀᴠᴇ+ʜᴇʀᴏᴋᴜ+ᴀᴄᴄᴏᴜɴᴛ+Ⰶ;Ⰶ+ᴛʜᴇɴ+ᴅᴇᴘʟᴏʏ+ᴀʟsᴏ+ᴏɴ+ᴠᴘs+sᴇʀᴠᴇʀ+Ⰶ;Ⰶ+ᴘᴏᴡᴇʀᴇᴅ+ʙʏ+ʀᴏʏ+ᴇᴅɪᴛx+Ⰶ">
 <p align="center">
@@ -20,21 +20,17 @@
 **※ ᴛᴇxᴛ ʙᴏᴛ ➛ [‌⚘ ɴ ʏ ᴋ ᴀ ᴀ ☂ ᴍ ᴜ s ɪ ᴄ ₰](https://t.me/Nykaaxbot)**
 
 
- <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+🄷🅰🄿🅿🅈+🅷🄾🅻🄸+♥︎">
+ <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+🄷🄰🄿🄰🅈+🄷🄾🄻🄸+♥︎">
 
 
 <h3 align="center">
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
-<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/tinaarobot/ROYMUSIC"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-00FFFF?style=for-the-badge&logo=heroku" width="220" height="60"/></a></p>
+<p align="center"><a href="https://dashboard.heroku.com/new?template=https://github.com/tinaarobot/NYKAAXBOT"> <img src="https://img.shields.io/badge/Deploy%20On%20Heroku-00FFFF?style=for-the-badge&logo=heroku" width="220" height="60"/></a></p>
 
 
-<img src="https://readme-typing-svg.herokuapp.com?color=white&width=420&lines=💥+ɪғ+ᴀɴʏ+ᴇʀʀᴏʀ+ᴛʜᴇɴ+sᴇɴᴅ+ᴍᴇ+ᴇʀʀᴏʀ+ɪɴ+ʀᴏʏ+ᴇᴅɪᴛx+...">
-<p align="center">
-<a href="https://telegram.me/THE_Friendz"><img src="https://img.shields.io/badge/-๛DM TO RoY EdiTX%20☆-FF00FF.svg?style=for-the-badge&logo=Telegram"></a>
-</p>
-<h3 align="center">
+
 
 ━━━━━━━━━━━━━━━━━━━━
 
@@ -51,5 +47,3 @@
 </p>
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif"> 
-<img src="https://camo.githubusercontent.com/82291b0fe831bfc6781e07fc5090cbd0a8b912bb8b8d4fec0696c881834f81ac/68747470733a2f2f70726f626f742e6d656469612f394575424971676170492e676966" width="800" height="3">
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
