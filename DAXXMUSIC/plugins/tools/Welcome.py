@@ -38,15 +38,15 @@ def welcomepic(pic, user, chat, id, uname):
     pfp = Image.open(pic).convert("RGBA")
     pfp = circle(pfp)
     pfp = pfp.resize(
-        (480, 480)
+        (460, 460)
     ) 
     draw = ImageDraw.Draw(background)
     font = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=50)
     font2 = ImageFont.truetype('DAXXMUSIC/assets/font.ttf', size=90)
-    draw.text((80, 200), f'NAME: {unidecode(user)}', fill=(255, 0, 255), font=font)
-    draw.text((80, 300), f'ID: {id}', fill=(255, 0, 255), font=font)
-    draw.text((80, 400), f"USERNAME : {uname}", fill=(255,0,255),font=font)
-    pfp_position = (720, 85)  
+    draw.text((80, 250), f'NAME: {unidecode(user)}', fill=(255, 0, 255), font=font)
+    draw.text((80, 320), f'ID: {id}', fill=(255, 0, 255), font=font)
+    draw.text((80, 390), f"USERNAME : {uname}", fill=(255,0,255),font=font)
+    pfp_position = (740, 100)  
     background.paste(pfp, pfp_position, pfp)  
     background.save(
         f"downloads/welcome#{id}.png"
