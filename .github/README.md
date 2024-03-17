@@ -3,11 +3,11 @@
 
 
 
-<h2 align="center">
+
     ♛ ─「 𝗡𝗬𝗞𝗔𝗔 𝗠𝗨𝗦𝗜𝗖 」─ ♛
 
  
-</h2>
+
 <img src="https://readme-typing-svg.herokuapp.com?color=FF0786&width=420&lines=Ⰶ+ʜᴇʏ+ᴄᴜᴛɪᴇ+ᴅᴇᴘʟᴏʏ+ʙᴏᴛ+ᴏɴ+ʜᴇʀᴏᴋᴜ+Ⰶ;Ⰶ+ɪғ+ʏᴏᴜ+ᴅᴏɴ'ᴛ+ʜᴀᴠᴇ+ʜᴇʀᴏᴋᴜ+ᴀᴄᴄᴏᴜɴᴛ+Ⰶ;Ⰶ+ᴛʜᴇɴ+ᴅᴇᴘʟᴏʏ+ᴀʟsᴏ+ᴏɴ+ᴠᴘs+sᴇʀᴠᴇʀ+Ⰶ;Ⰶ+ᴘᴏᴡᴇʀᴇᴅ+ʙʏ+ʀᴏʏ+ᴇᴅɪᴛx+Ⰶ">
 <p align="center">
   <img src="https://telegra.ph/file/982b01ba53c3d69b0d0ce.jpg">
@@ -23,7 +23,7 @@
  <img src="https://readme-typing-svg.herokuapp.com?color=FF0000&width=420&lines=♥︎+🄷🄰🄿🄰🅈+🄷🄾🄻🄸+♥︎">
 
 
-<h3 align="center">
+
     ─「 ᴅᴇᴩʟᴏʏ ᴏɴ ʜᴇʀᴏᴋᴜ 」─
 </h3>
 
