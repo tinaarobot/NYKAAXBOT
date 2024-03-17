@@ -29,6 +29,7 @@ async def gen_cc(client, message):
 ๏ `{cards[9]}`
 
 **❅ ʙɪɴ ➠** `{resp.results[0].bin}`
+
 **❅ ᴄᴄ ɢᴇɴ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"""
         )
     except Exception as e:
