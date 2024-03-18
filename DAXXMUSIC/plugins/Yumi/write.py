@@ -4,6 +4,12 @@ from config import  BOT_USERNAME
 from DAXXMUSIC import app as app
 import requests
 
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
+
 @app.on_message(filters.command("write"))
 async def handwrite(_, message: Message):
     if message.reply_to_message:
@@ -14,13 +20,13 @@ async def handwrite(_, message: Message):
     write = requests.get(f"https://apis.xditya.me/write?text={text}").url
 
     caption = f"""
-๏ sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ 💘
-๏ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➛ {message.from_user.mention}
+✦ sᴜᴄᴇssғᴜʟʟʏ ᴡʀɪᴛᴛᴇɴ ᴛᴇxᴛ ✦
 
-๏ ᴡʀɪᴛᴛᴇɴ ʙʏ ➛ [ɴʏᴋᴀᴀ](https://t.me/nykaaxbot)
+๏ ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➠ {message.from_user.mention}
+๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [๛ɴ ʏ ᴋ ᴀ ᴀ࿐](https://t.me/nykaaxbot)
 """
     await m.delete()
-    await message.reply_photo(photo=write,caption=caption)
+    await message.reply_photo(photo=write,caption=caption, reply_markup=InlineKeyboardMarkup(EVAA),)
 
 mod_name = "ᴡʀɪᴛᴇᴛᴏᴏʟ"
 
