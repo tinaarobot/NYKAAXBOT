@@ -10,12 +10,12 @@ from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, In
 from typing import Union, Optional
 
 
- POLICE = [
-    [
-        InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
-    ]
- ]
+# POLICE = [
+  #  [
+    #    InlineKeyboardButton(
+   #         text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+#    ]
+# ]
 
 
 
