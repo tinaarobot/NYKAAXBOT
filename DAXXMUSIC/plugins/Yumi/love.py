@@ -1,7 +1,7 @@
 from pyrogram import Client, filters
 import random
 from DAXXMUSIC import app
-from pyorogram.types import InputMediaPhoto
+from pyorogram.types import NIMI
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
