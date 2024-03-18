@@ -23,9 +23,9 @@ async def all_repo_command(client, message):
             for chunk in chunked_repo_info:
                 await message.reply_text(chunk)
         else:
-            await message.reply_text("Please enter a GitHub username after the /allrepo command.")
+            await message.reply_text("✦ Please enter a GitHub username after the /allrepo command.")
     except Exception as e:
-        await message.reply_text(f"An error occurred: {str(e)}")
+        await message.reply_text(f"✦ An error occurred: {str(e)}")
 #######
 
 def get_all_repository_info(github_username):
@@ -38,11 +38,11 @@ def get_all_repository_info(github_username):
 
     # Extract relevant information from the response
     repo_info = "\n\n".join([
-        f"๏ ʀᴇᴘᴏsɪᴛᴏʀʏ ➛ {repo['full_name']}\n"
-        f"๏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➛ {repo['description']}\n"
-        f"๏ sᴛᴀʀs ➛ {repo['stargazers_count']}\n"
-        f"๏ ғᴏʀᴋs ➛ {repo['forks_count']}\n"
-        f"๏ ᴜʀʟ ➛ {repo['html_url']}"
+        f"✦ ʀᴇᴘᴏsɪᴛᴏʀʏ ➠ {repo['full_name']}\n\n"
+        f"๏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➠ {repo['description']}\n"
+        f"๏ sᴛᴀʀs ➠ {repo['stargazers_count']}\n"
+        f"๏ ғᴏʀᴋs ➠ {repo['forks_count']}\n"
+        f"๏ ᴜʀʟ ➠ {repo['html_url']}"
         for repo in data
     ])
 
