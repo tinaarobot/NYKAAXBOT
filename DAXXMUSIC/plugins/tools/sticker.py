@@ -14,7 +14,7 @@ from pyrogram.types import InlineKeyboardButton,InlineKeyboardMarkup
 async def upscale_image(client, message):
     try:
         if not message.reply_to_message or not message.reply_to_message.photo:
-            await message.reply_text("**ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ.**")
+            await message.reply_text("**✦ ᴘʟᴇᴀsᴇ ʀᴇᴘʟʏ ᴛᴏ ᴀɴ ɪᴍᴀɢᴇ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ɪᴛ.**")
             return
 
         image = message.reply_to_message.photo.file_id
@@ -36,18 +36,18 @@ async def upscale_image(client, message):
         await client.send_document(
             message.chat.id,
             document="upscaled_image.png",
-            caption="**๏ ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ!**",
+            caption="**๏ ʜᴇʀᴇ ɪs ᴛʜᴇ ᴜᴘsᴄᴀʟᴇᴅ ɪᴍᴀɢᴇ !**",
         )
 
     except Exception as e:
-        print(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
-        await message.reply_text("**ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
+        print(f"**✦ ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ**: {e}")
+        await message.reply_text("**✦ ғᴀɪʟᴇᴅ ᴛᴏ ᴜᴘsᴄᴀʟᴇ ᴛʜᴇ ɪᴍᴀɢᴇ. ᴘʟᴇᴀsᴇ ᴛʀʏ ᴀɢᴀɪɴ ʟᴀᴛᴇʀ**.")
 
 ######### sticker id
 
 @app.on_message(filters.command("packkang"))
 async def _packkang(app :app,message):  
-    txt = await message.reply_text("**ᴘʀᴏᴄᴇssɪɴɢ....**")
+    txt = await message.reply_text("**✦ ᴘʀᴏᴄᴇssɪɴɢ....**")
     if not message.reply_to_message:
         await txt.edit('ʀᴇᴘʟʏ ᴛᴏ ᴍᴇssᴀɢᴇ')
         return
@@ -94,7 +94,7 @@ async def _packkang(app :app,message):
                 stickers=sticks,
             )
         )
-        await txt.edit(f"**๏ ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**๏ ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **: {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
+        await txt.edit(f"**๏ ʜᴇʀᴇ ɪs ʏᴏᴜʀ ᴋᴀɴɢᴇᴅ ʟɪɴᴋ**!\n**๏ ᴛᴏᴛᴀʟ sᴛɪᴄᴋᴇʀ **➠ {len(sticks)}",reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("ᴘᴀᴄᴋ ʟɪɴᴋ",url=f"http://t.me/addstickers/{short_name}")]]))
     except Exception as e:
         await message.reply(str(e))
 
@@ -103,15 +103,15 @@ async def _packkang(app :app,message):
 @app.on_message(filters.command(["stickerid","stid"]))
 async def sticker_id(app: app, msg):
     if not msg.reply_to_message:
-        await msg.reply_text("Reply to a sticker")        
+        await msg.reply_text("✦ Reply to a sticker")        
     elif not msg.reply_to_message.sticker:
-        await msg.reply_text("Reply to a sticker")        
+        await msg.reply_text("✦ Reply to a sticker")        
     st_in = msg.reply_to_message.sticker
     await msg.reply_text(f"""
 ❀ <u>**sᴛɪᴄᴋᴇʀ ɪɴғᴏ**</u> ❀
 
-**๏ sᴛɪᴄᴋᴇʀ ɪᴅ **➛ `{st_in.file_id}`\n
-**๏ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **➛ `{st_in.file_unique_id}`
+**๏ sᴛɪᴄᴋᴇʀ ɪᴅ **➠ `{st_in.file_id}`\n
+**๏ sᴛɪᴄᴋᴇʀ ᴜɴɪǫᴜᴇ ɪᴅ **➠ `{st_in.file_unique_id}`
 """)
 
 
