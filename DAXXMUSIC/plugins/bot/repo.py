@@ -3,13 +3,13 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from DAXXMUSIC import app
 from config import BOT_USERNAME
 
-start_txt = """**
+start_txt = """
 ✦ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !
 
-❅ ɪ ᴀᴍ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗
+❅ ɪ ᴀᴍ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗ ᴍ ᴜ s ɪ ᴄ
 
 ❅ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ๛ɴ ʏ ᴋ ᴀ ᴀ ༗ ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.
-**"""
+"""
 
 
 
