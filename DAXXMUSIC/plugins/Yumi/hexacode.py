@@ -1,7 +1,13 @@
 from pyrogram import Client, filters
 from DAXXMUSIC import app
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message 
 from config import BOT_USERNAME
 
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
 
 def hex_to_text(hex_string):
     try:
@@ -28,6 +34,6 @@ def convert_text(_, message):
 
         response_text = f"๏ ɪɴᴘᴜᴛ ᴛᴇxᴛ ➠\n {input_text}\n\n๏ ʜᴇx ʀᴇᴘʀᴇsᴇɴᴛᴀᴛɪᴏɴ ➠\n {hex_representation}\n\n๏ ᴅᴇᴄᴏᴅᴇᴅ ᴛᴇxᴛ ➠\n {decoded_text}\n\n\n๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"
 
-        message.reply_text(response_text)
+        message.reply_text((response_text),reply_markup=InlineKeyboardMarkup(EVAA),)
     else:
-        message.reply_text("Please provide text after the /code command.")
+        message.reply_text("✦ Please provide text after the /code command.")
