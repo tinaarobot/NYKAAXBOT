@@ -13,10 +13,8 @@ from typing import Union, Optional
  POLICE = [
     [
         InlineKeyboardButton(
-            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
-            url=f"https://t.me/nykaaxbot?startgroup=true",
-        ),
-    ],
+            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ]
  ]
 
 
