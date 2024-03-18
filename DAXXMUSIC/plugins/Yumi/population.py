@@ -1,8 +1,15 @@
 from pyrogram import Client, filters
 from pyrogram.types import Message
 import requests
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from DAXXMUSIC import app
 
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+    ],
+]
 
 @app.on_message(filters.command("population"))
 def country_command_handler(client: Client, message: Message):
@@ -24,17 +31,18 @@ def country_command_handler(client: Client, message: Message):
             population = country_info[0].get("population", "N/A")
 
             response_text = (
-                f"Country Information\n\n"
-                f"Name: {country_name}\n"
-                f"Capital: {capital}\n"
-                f"Population: {population}"
+                f"✦ ᴄᴏᴜɴᴛʀʏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ✦\n\n"
+                f"๏ ɴᴀᴍᴇ ➠ {country_name}\n"
+                f"๏ ᴄᴀᴘɪᴛᴀʟ ➠ {capital}\n"
+                f"๏ ᴘᴏᴘᴜʟᴀᴛɪᴏɴ ➠ {population}\n\n"
+                f"๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"
             )
         else:
-            response_text = "Error fetching country information from the API."
+            response_text = "✦ Error fetching country information from the API."
     except requests.exceptions.HTTPError as http_err:
-        response_text = f"HTTP error occurred Enter correct Country code"
+        response_text = f"✦ HTTP error occurred Enter correct Country code"
     except Exception as err:
-        response_text = f" Error @iam_daxc"
+        response_text = f"✦ ᴇʀʀᴏʀ ➠ @H_CC_HELP"
 
     # Send the response to the Telegram chat
-    message.reply_text(response_text)
+    message.reply_text((response_text),reply_markup=InlineKeyboardMarkup(EVAA),)
