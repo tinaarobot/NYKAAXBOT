@@ -34,7 +34,7 @@ def get_text(message: Message) -> [None, str]:
         return None
 
 
-@app.on_message(filters.command(["yt", "video"]))
+@app.on_message(filters.command(["video"]))
 async def ytmusic(client, message: Message):
     urlissed = get_text(message)
     await message.delete()
@@ -42,10 +42,10 @@ async def ytmusic(client, message: Message):
     user_name = message.from_user.first_name
     chutiya = "[" + user_name + "](tg://user?id=" + str(user_id) + ")"
 
-    pablo = await client.send_message(message.chat.id, f"sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...")
+    pablo = await client.send_message(message.chat.id, f"✦ sᴇᴀʀᴄʜɪɴɢ, ᴩʟᴇᴀsᴇ ᴡᴀɪᴛ...")
     if not urlissed:
         await pablo.edit(
-            "😴 sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴ ʏᴏᴜᴛᴜʙᴇ.\n\n» ᴍᴀʏʙᴇ ᴛᴜɴᴇ ɢᴀʟᴛɪ ʟɪᴋʜᴀ ʜᴏ, ᴩᴀᴅʜᴀɪ - ʟɪᴋʜᴀɪ ᴛᴏʜ ᴋᴀʀᴛᴀ ɴᴀʜɪ ᴛᴜ !"
+            "✦ sᴏɴɢ ɴᴏᴛ ғᴏᴜɴᴅ ᴏɴ ʏᴏᴜᴛᴜʙᴇ."
         )
         return
 
@@ -79,11 +79,11 @@ async def ytmusic(client, message: Message):
             ytdl_data = ytdl.extract_info(url, download=True)
 
     except Exception as e:
-        await pablo.edit(f"**ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ.** \n**ᴇʀʀᴏʀ :** `{str(e)}`")
+        await pablo.edit(f"**✦ ғᴀɪʟᴇᴅ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ.** \n\n**✦ ᴇʀʀᴏʀ :** `{str(e)}`")
         return
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"๏ **ᴛɪᴛʟᴇ ➛** [{thum}]({mo})\n๏ **ᴄʜᴀɴɴᴇʟ ➛** {thums}\n๏ **sᴇᴀʀᴄʜᴇᴅ ➛** {urlissed}\n๏ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➛** {chutiya}"
+    capy = f"✦ **ᴛɪᴛʟᴇ ➠** [{thum}]({mo})\n\n๏ **ᴄʜᴀɴɴᴇʟ ➠** {thums}\n๏ **sᴇᴀʀᴄʜᴇᴅ ➠** {urlissed}\n๏ **ʀᴇǫᴜᴇsᴛᴇᴅ ʙʏ ➠** {chutiya}\n\n**๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐**"
     await client.send_video(
         message.chat.id,
         video=open(file_stark, "rb"),
