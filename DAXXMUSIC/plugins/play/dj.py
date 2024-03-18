@@ -39,7 +39,7 @@ def apply_bass_boost(audio_path):
     boosted_audio = audio.low_pass_filter(200).high_pass_filter(70).apply_gain(30)
 
     # Save the boosted audio as a temporary file
-    boosted_audio_path = "yumiboost.mp3"
+    boosted_audio_path = "nykaaboost.mp3"
     boosted_audio.export(boosted_audio_path, format="mp3")
 
     return boosted_audio_path
