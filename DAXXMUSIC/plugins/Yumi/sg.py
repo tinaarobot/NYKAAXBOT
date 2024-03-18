@@ -16,12 +16,12 @@ async def sg(client: Client, message: Message):
         args = message.reply_to_message.from_user.id
     else:
         args = message.text.split()[1]
-    lol = await message.reply("<code>Processing...</code>")
+    lol = await message.reply("✦ <code>Processing...</code>")
     if args:
         try:
             user = await client.get_users(f"{args}")
         except Exception:
-            return await lol.edit("<code>Please specify a valid user!</code>")
+            return await lol.edit("✦ <code>Please specify a valid user!</code>")
     bo = ["sangmata_bot", "sangmata_beta_bot"]
     sg = random.choice(bo)
     if 1 in assistants:
