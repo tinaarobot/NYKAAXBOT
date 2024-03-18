@@ -13,15 +13,15 @@ from config import BOT_USERNAME
 async def ytsearch(_, message: Message):
     try:
         if len(message.command) < 2:
-            await message.reply_text("/search needs an argument!")
+            await message.reply_text("✦ /yt needs an argument!")
             return
         query = message.text.split(None, 1)[1]
-        m = await message.reply_text(" searching")
+        m = await message.reply_text("✦ searching....")
         results = YoutubeSearch(query, max_results=5).to_dict()
         i = 0
         text = ""
         while i < 5:
-            text += f"๏ ᴠɪᴅᴇᴏ ɴᴀᴍᴇ ➠ {results[i]['title']}\n"
+            text += f"✦ ᴠɪᴅᴇᴏ ɴᴀᴍᴇ ➠ {results[i]['title']}\n\n"
             text += f"๏ ᴠɪᴅᴇᴏ ᴅᴜʀᴀᴛɪᴏɴ ➠ {results[i]['duration']}\n"
             text += f"๏ ᴠɪᴅᴇᴏ ᴠɪᴇᴡs ➠ {results[i]['views']}\n"
             text += f"๏ ᴠɪᴅᴇᴏ ᴄʜᴀɴɴᴇʟ ➠ {results[i]['channel']}\n"
