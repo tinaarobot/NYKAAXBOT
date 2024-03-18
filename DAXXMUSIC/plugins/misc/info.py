@@ -9,7 +9,16 @@ from pyrogram.types import *
 from pyrogram.types import InlineQueryResultArticle, InputTextMessageContent, InlineKeyboardMarkup, InlineKeyboardButton
 from typing import Union, Optional
 
- #
+
+ POLICE = [
+    [
+        InlineKeyboardButton(
+            text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ",
+            url=f"https://t.me/nykaaxbot?startgroup=true",
+        ),
+    ],
+ ]
+
 
 
 get_font = lambda font_size, font_path: ImageFont.truetype(font_path, font_size)
@@ -121,7 +130,7 @@ async def userinfo(_, message):
                 profile_path=photo,
             )
             await app.send_photo(chat_id, photo=welcome_photo, caption=INFO_TEXT.format(
-                id, name, username, mention, status, bio), reply_to_message_id=message.id)
+                id, name, username, mention, status, dc_id, bio), reply_to_message_id=message.id)
         except Exception as e:
             await message.reply_text(str(e))        
       
