@@ -67,6 +67,5 @@ def love_command(client, message):
         response = f"❅ ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟᴏᴠᴇ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ ⏤͟͟͞͞★ \n\n❅ {name1} ♥️ + {name2} ♥️ = {love_percentage}%\n\n{love_message}"
     else:
         response = "✦ ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛᴡᴏ ɴᴀᴍᴇs ᴀғᴛᴇʀ /lov ᴄᴏᴍᴍᴀɴᴅ."
-    app.send_photo(photo=random.choice(NIMI), response, reply_markup=InlineKeyboardMarkup(EVAA),
-    )
+    app.send_photo(photo=random.choice(NIMI), response, reply_markup=InlineKeyboardMarkup(EVAA),)
 
