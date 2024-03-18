@@ -16,9 +16,10 @@ async def wish(_, m):
     url = api["results"][0]['url']
     text = m.text.split(None, 1)[1]
     wish_count = random.randint(1, 100)
-    wish = f"๏ ʜᴇʏ {m.from_user.first_name}! "
-    wish += f"๏ ʏᴏᴜʀ ᴡɪꜱʜ ➛ {text} "
-    wish += f"๏ ᴘᴏꜱꜱɪʙʟᴇ ᴛᴏ ➛ {wish_count}%"
+    wish = f"๏ ʜᴇʏ {m.from_user.first_name}!"
+    wish += f"\n๏ ʏᴏᴜʀ ᴡɪꜱʜ ➠ {text} "
+    wish += f"\n๏ ᴘᴏꜱꜱɪʙʟᴇ ᴛᴏ ➠ {wish_count}%"
+    wish += f"\n\n๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"
     
     await app.send_animation(
         chat_id=m.chat.id,
