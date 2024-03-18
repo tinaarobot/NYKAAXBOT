@@ -13,7 +13,7 @@ trans = Translator()
 async def translate(_, message) -> None:
     reply_msg = message.reply_to_message
     if not reply_msg:
-        await message.reply_text("ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ !")
+        await message.reply_text("✦ ʀᴇᴘʟʏ ᴛᴏ ᴀ ᴍᴇssᴀɢᴇ ᴛᴏ ᴛʀᴀɴsʟᴀᴛᴇ ɪᴛ !")
         return
     if reply_msg.caption:
         to_translate = reply_msg.caption
@@ -32,7 +32,7 @@ async def translate(_, message) -> None:
         dest = "en"
     translation = await trans(to_translate, sourcelang=source, targetlang=dest)
     reply = (
-        f"ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} to {dest}:\n"
-        f"{translation.text}"
+        f"✦ ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} ᴛᴏ {dest} ⏤͟͟͞͞★\n\n"
+        f"♥︎ {translation.text}"
     )
     await message.reply_text(reply)
