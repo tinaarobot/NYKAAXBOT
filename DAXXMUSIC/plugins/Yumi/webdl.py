@@ -26,10 +26,10 @@ def download_website(url):
         if response.status_code == 200:
             return response.text
         else:
-            return f"Failed to download source code. Status code: {response.status_code}"
+            return f"✦ Failed to download source code. Status code ➠ {response.status_code}"
 
     except Exception as e:
-        return f"An error occurred: {str(e)}"
+        return f"✦ An error occurred: {str(e)}"
 
 
 
@@ -38,7 +38,7 @@ def download_website(url):
 def web_download(client, message):
     # Check if the command has a URL attached
     if len(message.command) == 1:
-        message.reply_text("Please enter a URL along with the /webdl command.")
+        message.reply_text("✦ Please enter a URL along with the /webdl command.")
         return
 
     # Get the URL after /webdl command
@@ -53,4 +53,4 @@ def web_download(client, message):
             file.write(source_code)
 
         # Reply with the file
-        message.reply_document(document='website.txt', caption=f"Source code of {url}")
+        message.reply_document(document='website.txt', caption=f"✦ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ᴜʀʟ ➠ {url}")
