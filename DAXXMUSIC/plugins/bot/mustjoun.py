@@ -23,11 +23,12 @@ async def must_join_channel(app: Client, msg: Message):
                 link = chat_info.invite_link
             try:
                 await msg.reply_photo(
-                    photo="https://graph.org/file/84de4b440300297a8ecb3.jpg", caption=f"๏ ᴀᴄᴄᴏʀᴅɪɴɢ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ ʏᴏᴜ'ᴠᴇ ɴᴏᴛ ᴊᴏɪɴᴇᴅ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ʏᴇᴛ, ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ᴍᴇ ᴛʜᴇɴ ᴊᴏɪɴ [๏sᴜᴘᴘᴏʀᴛ๏]({link}) ᴀɴᴅ sᴛᴀʀᴛ ᴍᴇ ᴀɢᴀɪɴ ! ",
+                    photo="https://graph.org/file/84de4b440300297a8ecb3.jpg", caption=f"❅ ʜᴇʏ ᴛʜᴇʀᴇ, ɴɪᴄᴇ ᴛᴏ ᴍᴇᴇᴛ ᴜʜʜ !\n\n❅ ɪғ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜsᴇ ๛ɴ ʏ ᴋ ᴀ ᴀ ♡゙ ʙᴏᴛ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ᴀɴᴅ ʏᴏᴜ ᴊᴏɪɴᴇᴅ, ᴛʜᴇɴ ʏᴏᴜ ᴄᴀɴ ᴜsᴇ ᴀʟʟ ᴍʏ ᴄᴏᴍᴍᴀɴᴅs ",
                     reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("ᴊᴏɪɴ", url=link),
+                                InlineKeyboardButton("ᴜᴘᴅᴀᴛᴇ", url="https://t.me/Roy_editx"),
+                                InlineKeyboardButton("sᴜᴘᴘᴏʀᴛ", url=link),
                             ]
                         ]
                     )
@@ -35,5 +36,5 @@ async def must_join_channel(app: Client, msg: Message):
                 await msg.stop_propagation()
             except ChatWriteForbidden:
                 pass
-    except ChatAdminRequired:
-        print(f"๏ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴍᴜsᴛ_ᴊᴏɪɴ ᴄʜᴀᴛ ๏: {MUST_JOIN} !")
+  #  except ChatAdminRequired:
+      #  print(f"๏ ᴘʀᴏᴍᴏᴛᴇ ᴍᴇ ᴀs ᴀɴ ᴀᴅᴍɪɴ ɪɴ ᴛʜᴇ ᴍᴜsᴛ_ᴊᴏɪɴ ᴄʜᴀᴛ ๏: {MUST_JOIN} !")
