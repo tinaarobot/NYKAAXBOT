@@ -22,7 +22,7 @@ def pic(client, message):
     if random_pic:
         message.reply_photo(random_pic)
     else:
-        message.reply("Sorry, I couldn't get a random picture at the moment. 😔")
+        message.reply("✦ Sorry, I couldn't get a random picture at the moment. 😔")
 
 
 
@@ -34,7 +34,7 @@ def pic_command(client, message: Message):
     try:
         name = message.command[1]
     except IndexError:
-        client.send_message(message.chat.id, "Please provide a name after the /pic command.")
+        client.send_message(message.chat.id, "✦ Please provide a name after the /pic command.")
         return
 
     # Build the Unsplash URL with the provided name
@@ -44,8 +44,8 @@ def pic_command(client, message: Message):
     try:
         response = requests.get(unsplash_url)
         if response.status_code == 200:
-            client.send_photo(message.chat.id, photo=unsplash_url, caption=f"Here's a picture related to {name}.")
+            client.send_photo(message.chat.id, photo=unsplash_url, caption=f"✦ ʜᴇʀᴇ's ᴀ ᴘɪᴄᴛᴜʀᴇ ʀᴇʟᴀᴛᴇᴅ ᴛᴏ ➠ {name}.\n\n✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐" )
         else:
-            client.send_message(message.chat.id, "Failed to fetch image.")
+            client.send_message(message.chat.id, "✦ Failed to fetch image.")
     except requests.RequestException as e:
-        client.send_message(message.chat.id, f"An error occurred: {str(e)}")        
+        client.send_message(message.chat.id, f"✦ An error occurred ➠ {str(e)}")        
