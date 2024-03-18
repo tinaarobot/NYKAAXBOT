@@ -57,7 +57,7 @@ def welcomepic(pic, user, chat, id, uname):
 
 @app.on_message(filters.command("swel") & ~filters.private)
 async def auto_state(_, message):
-    usage = "**Usage:**\n/swel [ENABLE|DISABLE]"
+    usage = "**✦ ᴜsᴀɢᴇ ➠** /swel [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
     chat_id = message.chat.id
@@ -71,20 +71,20 @@ async def auto_state(_, message):
       state = state.lower()
       if state == "enable":
         if A:
-           return await message.reply_text("Special Welcome Already Enabled")
+           return await message.reply_text("✦ Special Welcome Already Enabled")
         elif not A:
            await add_wlcm(chat_id)
-           await message.reply_text(f"Enabled Special Welcome in {message.chat.title}")
+           await message.reply_text(f"✦ Enabled Special Welcome in {message.chat.title}")
       elif state == "disable":
         if not A:
-           return await message.reply_text("Special Welcome Already Disabled")
+           return await message.reply_text("✦ Special Welcome Already Disabled")
         elif A:
            await rm_wlcm(chat_id)
-           await message.reply_text(f"Disabled Special Welcome in {message.chat.title}")
+           await message.reply_text(f"✦ Disabled Special Welcome in {message.chat.title}")
       else:
         await message.reply_text(usage)
     else:
-        await message.reply("Only Admins Can Use This Command")
+        await message.reply("✦ Only Admins Can Use This Command")
     
 #bhag 
 
@@ -123,20 +123,15 @@ async def greet_group(_, member: ChatMemberUpdated):
 **
 ⁣❅────✦ ᴡᴇʟᴄᴏᴍᴇ ✦────❅
 
+๏ ɴᴀᴍᴇ ➠  {user.mention}
+๏ ᴜsᴇʀɴᴀᴍᴇ ➠ @{user.username}
+๏ ᴜsᴇʀ ɪᴅ  ➠ {user.id}
 
-
- ❅𝐍𝐚𝐦𝐞 ➳  {user.mention}
- ❅𝐔𝐬𝐞𝐫 𝐍𝐚𝐦𝐞 ➳ @{user.username}
- ❅𝐔𝐬𝐞𝐫 𝐈𝐝  ➳ {user.id}
-
-
-**
+๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [๛ɴ ʏ ᴋ ᴀ ᴀ࿐](https://t.me/nykaaxbot)**
 """,
 reply_markup=InlineKeyboardMarkup(
 [
-[InlineKeyboardButton(f"๏ ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ!", url=f"https://t.me/CutieXmusicBot?startgroup=new"),
-InlineKeyboardButton(f"๏ ᴏᴡɴᴇʀ !",
-url=f"tg://openmessage?user_id=6761639198"),
+[InlineKeyboardButton(f"ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxBot?startgroup=new"),
 ]
 ]
 ))
