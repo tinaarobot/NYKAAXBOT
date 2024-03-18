@@ -1,6 +1,13 @@
 from pyrogram import Client, filters
 import requests
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message 
 from DAXXMUSIC import app 
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
 
 # Define a command handler for the /meme command
 @app.on_message(filters.command("meme"))
@@ -18,14 +25,12 @@ def meme_command(client, message):
         title = data.get("title")
 
         # Mention the bot username in the caption
-        caption = f"✦ {title} ✦\n\n✦ ʀᴇǫᴜᴇsᴛ ʙʏ ➛ {message.from_user.mention}\n✦ ʙᴏᴛ ᴜsᴇʀɴᴀᴍᴇ ➛ @{app.get_me().username}"
+        caption = f"✦ {title}\n\n❅ ʀᴇǫᴜᴇsᴛ ʙʏ ➠ {message.from_user.mention}\n❅ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [๛ɴ ʏ ᴋ ᴀ ᴀ࿐](https://t.me/h_cc_help)"
 
         # Send the meme image to the user with the modified caption
         message.reply_photo(
-            photo=meme_url,
-            caption=caption
-        )
+            photo=meme_url, caption=caption,reply_markup=InlineKeyboardMarkup(EVAA),)
 
     except Exception as e:
-        print(f"Error fetching meme: {e}")
-        message.reply_text("Sorry, I couldn't fetch a meme at the moment.")
+        print(f"✦ Error fetching meme ➠ {e}")
+        message.reply_text("✦ Sorry, I couldn't fetch a meme at the moment.")
