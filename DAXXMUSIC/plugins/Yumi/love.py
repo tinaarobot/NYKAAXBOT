@@ -41,7 +41,7 @@ def love_command(client, message):
         love_message = get_random_message(love_percentage)
 
         response = f"❅ ʜᴇʀᴇ ɪs ʏᴏᴜʀ ʟᴏᴠᴇ ᴘᴇʀᴄᴇɴᴛᴀɢᴇ ⏤͟͟͞͞★ \n\n❅ {name1} ♥️ + {name2} ♥️ = {love_percentage}%\n\n{love_message}"
-        client.send_message(message.chat.id, response, reply_markup=InlineKeyboardMarkup(EVAA),)
+        #client.send_message(message.chat.id, response, reply_markup=InlineKeyboardMarkup(EVAA),)
     else:
         response = "✦ ᴘʟᴇᴀsᴇ ᴇɴᴛᴇʀ ᴛᴡᴏ ɴᴀᴍᴇs ᴀғᴛᴇʀ /lov ᴄᴏᴍᴍᴀɴᴅ."
     client.send_message(message.chat.id, response, reply_markup=InlineKeyboardMarkup(EVAA),)
