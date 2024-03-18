@@ -6,7 +6,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 @app.on_message(filters.command(["genpassword", 'genpw']))
 async def password(bot, update):
-    message = await update.reply_text(text="Pʀᴏᴄᴇꜱꜱɪɴɢ..")
+    message = await update.reply_text(text="✦ ᴘʀᴏᴄᴇꜱꜱɪɴɢ...")
     password = "abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+".lower()
     if len(update.command) > 1:
         qw = update.text.split(" ", 1)[1]
@@ -15,7 +15,7 @@ async def password(bot, update):
         qw = random.choice(ST)
     limit = int(qw)
     random_value = "".join(random.sample(password, limit))
-    txt = f"๏ <b>ʟɪᴍɪᴛ ➛</b> {str(limit)} \n๏ <b>ᴘᴀꜱꜱᴡᴏʀᴅ ➛ <code>{random_value}</code>"
-    btn = InlineKeyboardMarkup([[InlineKeyboardButton('↻ ᴀᴅᴅ ᴍᴇ ↻', url='https://t.me/NykaaxBot?startgroup=true')]])
+    txt = f"๏ <b>ʟɪᴍɪᴛ ➠</b> {str(limit)} \n๏ <b>ᴘᴀꜱꜱᴡᴏʀᴅ ➠ <code>{random_value}</code>"
+    btn = InlineKeyboardMarkup([[InlineKeyboardButton(' ᴀᴅᴅ ᴍᴇ ', url='https://t.me/NykaaxBot?startgroup=true')]])
     await message.edit_text(text=txt, reply_markup=btn, parse_mode=enums.ParseMode.HTML)
 
