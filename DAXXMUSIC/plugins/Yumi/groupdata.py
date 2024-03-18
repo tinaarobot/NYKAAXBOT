@@ -36,7 +36,7 @@ async def instatus(app, message):
         end_time = time.perf_counter()
         timelog = "{:.2f}".format(end_time - start_time)
         await sent_message.edit(f"""
-**•❅─────✧❅✦❅✧─────❅•
+**❅─────✧❅✦❅✧─────❅
 
 ๏ ɴᴀᴍᴇ ➠ {message.chat.title} 
 ๏ ᴍᴇᴍʙᴇʀs ➠ [ {count} ] 
@@ -48,7 +48,7 @@ async def instatus(app, message):
 
 ๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐ **""")
     else:
-        sent_message = await message.reply_text("ONLY ADMINS CAN USE THIS !")
+        sent_message = await message.reply_text("✦ ONLY ADMINS CAN USE THIS !")
         await sleep(5)
         await sent_message.delete()
 
