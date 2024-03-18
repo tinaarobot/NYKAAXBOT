@@ -16,7 +16,7 @@ async def bored_command(client, message):
         activity = data.get("activity")
         if activity:
             # Send the activity to the user who triggered the command
-            await message.reply(f"𝗙𝗲𝗲𝗹𝗶𝗻𝗴 𝗯𝗼𝗿𝗲𝗱? 𝗛𝗼𝘄 𝗮𝗯𝗼𝘂𝘁:\n\n {activity}")
+            await message.reply(f"✦ 𝗙𝗘𝗘𝗟𝗜𝗡𝗚𝗦 𝗕𝗢𝗥𝗘𝗗 ? 𝗛𝗢𝗪 𝗔𝗕𝗢𝗨𝗧 :\n\n {activity}")
         else:
             await message.reply("Nᴏ ᴀᴄᴛɪᴠɪᴛʏ ғᴏᴜɴᴅ.")
     else:
