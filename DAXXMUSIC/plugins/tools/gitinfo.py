@@ -47,7 +47,6 @@ async def github(_, message):
 
                 caption = f"""ㅤㅤ✦ ɢɪᴛʜᴜʙ ɪɴғᴏ ᴏғ {name} ✦
                  
-•❅─────✧❅✦❅✧─────❅•
 ๏ ᴜsᴇʀɴᴀᴍᴇ ➠ {username}
 ๏ ʙɪᴏ ➠ {bio}
 ๏ ʟɪɴᴋ ➠ [Here]({url})
@@ -59,7 +58,7 @@ async def github(_, message):
 ๏ ғᴏʟʟᴏᴡᴇʀs ➠ {followers}
 ๏ ғᴏʟʟᴏᴡɪɴɢ ➠ {following}
 
-๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [๛ɴ ʏ ᴋ ᴀ ᴀ࿐](https://t.me/roy_editx)"""
+๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ [๛ɴ ʏ ᴋ ᴀ ᴀ࿐](https://t.me/nykaaxbot)"""
 
             except Exception as e:
                 print(str(e))
