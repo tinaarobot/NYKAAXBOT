@@ -28,28 +28,37 @@ from strings import get_string
 
 
 YUMI_PICS = [
-"https://telegra.ph/file/7611ad355da9de11423e8.jpg",
-"https://telegra.ph/file/1166532656cd26238c94b.jpg",
-"https://telegra.ph/file/57c386813a1a26746479d.jpg",
-"https://telegra.ph/file/c41810d3f632921d00b43.jpg",
-"https://telegra.ph/file/b912059691f481b8b3439.jpg",
-"https://telegra.ph/file/5aad0a2c595547cfbd59a.jpg",
-"https://telegra.ph/file/a8402f4a91a42893a7928.jpg",
-"https://telegra.ph/file/717dcd9ac67965556bc9f.jpg",
-"https://telegra.ph/file/5e339c35608aedc2c6e86.jpg",
-"https://telegra.ph/file/cb16f4f1f141f88fd9dc3.jpg",
-"https://telegra.ph/file/aaadeab176227f51c0d55.jpg",
-"https://telegra.ph/file/993bfbb0f4c5302b1f65d.jpg",
-"https://telegra.ph/file/729e77a7871fe0075d695.jpg",
-"https://telegra.ph/file/460e59ccd14e203f69166.jpg",
-"https://telegra.ph/file/c706584f9c4d8ec4120c7.jpg",
-"https://telegra.ph/file/ded86839c47bdd843109b.jpg",
-"https://telegra.ph/file/4bbdd86219a0d996c6bbf.jpg",
-"https://telegra.ph/file/3d34c6a50a50d48e0090a.jpg",
-"https://telegra.ph/file/46f3c54fc68bb142e57b7.jpg",
+"https://graph.org/file/f76fd86d1936d45a63c64.jpg",
+"https://graph.org/file/69ba894371860cd22d92e.jpg",
+"https://graph.org/file/67fde88d8c3aa8327d363.jpg",
+"https://graph.org/file/3a400f1f32fc381913061.jpg",
+"https://graph.org/file/a0893f3a1e6777f6de821.jpg",
+"https://graph.org/file/5a285fc0124657c7b7a0b.jpg",
+"https://graph.org/file/25e215c4602b241b66829.jpg",
+"https://graph.org/file/a13e9733afdad69720d67.jpg",
+"https://graph.org/file/692e89f8fe20554e7a139.jpg",
+"https://graph.org/file/db277a7810a3f65d92f22.jpg",
+"https://graph.org/file/a00f89c5aa75735896e0f.jpg",
+"https://graph.org/file/f86b71018196c5cfe7344.jpg",
+"https://graph.org/file/a3db9af88f25bb1b99325.jpg",
+"https://graph.org/file/5b344a55f3d5199b63fa5.jpg",
+"https://graph.org/file/84de4b440300297a8ecb3.jpg",
+"https://graph.org/file/84e84ff778b045879d24f.jpg",
+"https://graph.org/file/a4a8f0e5c0e6b18249ffc.jpg",
+"https://graph.org/file/ed92cada78099c9c3a4f7.jpg",
+"https://graph.org/file/d6360613d0fa7a9d2f90b.jpg",
+"https://graph.org/file/37248e7bdff70c662a702.jpg",
+"https://graph.org/file/0bfe29d15e918917d1305.jpg",
+"https://graph.org/file/16b1a2828cc507f8048bd.jpg",
+"https://graph.org/file/e6b01f23f2871e128dad8.jpg",
+"https://graph.org/file/cacbdddee77784d9ed2b7.jpg",
+"https://graph.org/file/ddc5d6ec1c33276507b19.jpg",
+"https://graph.org/file/39d7277189360d2c85b62.jpg",
+"https://graph.org/file/5846b9214eaf12c3ed100.jpg",
+"https://graph.org/file/ad4f9beb4d526e6615e18.jpg",
+"https://graph.org/file/3514efaabe774e4f181f2.jpg",   
 
 ]
-
 
 
 @app.on_message(filters.command(["start"]) & filters.private & ~BANNED_USERS)
@@ -70,7 +79,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"✦ {message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>✦ ᴜsᴇʀ ɪᴅ ➠</b> <code>{message.from_user.id}</code>\n<b>✦ ᴜsᴇʀɴᴀᴍᴇ ➠</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>sᴜᴅᴏʟɪsᴛ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
             return
         if name[0:3] == "inf":
@@ -108,7 +117,7 @@ async def start_pm(client, message: Message, _):
             if await is_on_off(2):
                 return await app.send_message(
                     chat_id=config.LOGGER_ID,
-                    text=f"✦ {message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n✦ <b>ᴜsᴇʀ ɪᴅ ➠</b> <code>{message.from_user.id}</code>\n✦ <b>ᴜsᴇʀɴᴀᴍᴇ ➠</b> @{message.from_user.username}",
+                    text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ ᴛᴏ ᴄʜᴇᴄᴋ <b>ᴛʀᴀᴄᴋ ɪɴғᴏʀᴍᴀᴛɪᴏɴ</b>.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
                 )
     else:
         out = private_panel(_)
@@ -123,7 +132,7 @@ async def start_pm(client, message: Message, _):
         if await is_on_off(2):
             return await app.send_message(
                 chat_id=config.LOGGER_ID,
-                text=f"✦ {message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n✦ <b>ᴜsᴇʀ ɪᴅ ➠</b> <code>{message.from_user.id}</code>\n✦ <b>ᴜsᴇʀɴᴀᴍᴇ ➠</b> @{message.from_user.username}",
+                text=f"{message.from_user.mention} ᴊᴜsᴛ sᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙᴏᴛ.\n\n<b>ᴜsᴇʀ ɪᴅ :</b> <code>{message.from_user.id}</code>\n<b>ᴜsᴇʀɴᴀᴍᴇ :</b> @{message.from_user.username}",
             )
 
 
