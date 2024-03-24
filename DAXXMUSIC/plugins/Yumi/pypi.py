@@ -3,6 +3,11 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 import requests
 from DAXXMUSIC import app
 
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+    ],
+]
 
 def get_pypi_info(package_name):
     try:
@@ -35,10 +40,11 @@ def pypi_info_command(client, message):
             info_message = f"๏ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ➠ {pypi_info['info']['name']}\n\n" \
                            f"๏ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ ➠ {pypi_info['info']['version']}\n\n" \
                            f"๏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➠ {pypi_info['info']['summary']}\n\n" \
-                           f"๏ ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ ➠ {pypi_info['info']['project_urls']['Homepage']}"
+                           f"๏ ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ ➠ [ᴄʟɪᴄᴋ ʜᴇʀᴇ]({pypi_info['info']['project_urls']['Homepage']})"
             
-            # Sending the PyPI information back to the user
-            client.send_message(message.chat.id, info_message)
+            
+            client.send_message(message.chat.id, info_message, reply_markup=InlineKeyboardMarkup(EVAA),
+    )
         
         else:
             # Handling the case where information retrieval failed
