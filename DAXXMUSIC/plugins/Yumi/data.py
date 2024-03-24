@@ -24,12 +24,17 @@ SOFTWARE.
 
 from pyrogram import Client, filters
 from faker import Faker
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from DAXXMUSIC import app
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+    ],
+]
 
 # Create a Faker instance
 fake = Faker()
-
-
 
 
 # Generate person info command handler
@@ -61,11 +66,12 @@ def generate_info(client, message):
         
         f"**๏ sᴛᴀᴛᴇ ➠** {state}\n"
         
-        f"**๏ ᴢɪᴘᴄᴏᴅᴇ ➠** {zipcode}\n"
+        f"**๏ ᴢɪᴘᴄᴏᴅᴇ ➠** {zipcode}\n\n"
 
-        f"๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐"
+        f"✦ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ ࿐"
     )
-
-    # Send the fake data to the user
-    message.reply_text(info_message)
+###
+    
+    message.reply_text(info_message, reply_markup=InlineKeyboardMarkup(EVAA),
+    )
     
