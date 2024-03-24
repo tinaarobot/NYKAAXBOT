@@ -2,6 +2,14 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 from datetime import datetime
 from DAXXMUSIC import app
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
 
 @app.on_message(filters.command("day"))
 def date_to_day_command(client: Client, message: Message):
@@ -14,7 +22,8 @@ def date_to_day_command(client: Client, message: Message):
             day_of_week = date_object.strftime("%A")
 
             # Reply with the day of the week
-            message.reply_text(f"✦ ᴛʜᴇ ᴅᴀʏ ᴏғ ᴛʜɪs ᴅᴀᴛᴇ {input_date} ɪs {day_of_week}.")
+            message.reply_text(f"✦ ᴛʜᴇ ᴅᴀʏ ᴏғ ᴛʜɪs ᴅᴀᴛᴇ {input_date} ɪs {day_of_week}.", reply_markup=InlineKeyboardMarkup(EVAA),)
+
 
         else:
             message.reply_text("✦ Please provide a valid date in the format `/day 2006-09-19` ")
