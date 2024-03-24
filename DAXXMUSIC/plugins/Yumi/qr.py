@@ -4,7 +4,14 @@ import qrcode
 from DAXXMUSIC import app
 from PIL import Image
 import io
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
+
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/nykaaxbot?startgroup=true"),
+    ],
+]
 
 
 # Function to create a QR code
@@ -35,6 +42,7 @@ def qr_handler(client, message: Message):
     if len(command_text) > 1:
         input_text = " ".join(command_text[1:])
         qr_image = generate_qr_code(input_text)
-        message.reply_photo(qr_image, caption="✦ ǫʀ sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴʀsᴛᴇᴅ ✦\n\n๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐ ")
+        message.reply_photo(qr_image, caption="✦ ǫʀ sᴜᴄᴄᴇssғᴜʟʟʏ ɢᴇɴʀsᴛᴇᴅ ✦\n\n๏ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➠ ๛ɴ ʏ ᴋ ᴀ ᴀ࿐ ", reply_markup=InlineKeyboardMarkup(EVAA),)
+
     else:
         message.reply_text("✦ Please provide the text for the QR code after the command. Example usage ➠ /qr text")
