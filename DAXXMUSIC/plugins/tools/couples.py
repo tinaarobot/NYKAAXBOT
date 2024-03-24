@@ -45,11 +45,11 @@ today = str(dt()[0])
 async def ctest(_, message):
     cid = message.chat.id
     if message.chat.type == ChatType.PRIVATE:
-        return await message.reply_text("ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
+        return await message.reply_text("✦ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ ᴏɴʟʏ ᴡᴏʀᴋs ɪɴ ɢʀᴏᴜᴘs.")
     try:
      #  is_selected = await get_couple(cid, today)
      #  if not is_selected:
-         msg = await message.reply_text("ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
+         msg = await message.reply_text("✦ ɢᴇɴᴇʀᴀᴛɪɴɢ ᴄᴏᴜᴘʟᴇs ɪᴍᴀɢᴇ...")
          #GET LIST OF USERS
          list_of_users = []
 
@@ -81,7 +81,7 @@ async def ctest(_, message):
          img1 = Image.open(f"{p1}")
          img2 = Image.open(f"{p2}")
 
-         img = Image.open("DAXXMUSIC/assets/COUPLES2.PNG")
+         img = Image.open("DAXXMUSIC/assets/CP.PNG")
 
          img1 = img1.resize((390, 390))
          img2 = img2.resize((390,390))
@@ -120,26 +120,7 @@ async def ctest(_, message):
          for x in a:
            img = "https://graph.org/" + x
            couple = {"c1_id": c1_id, "c2_id": c2_id}
-          # await save_couple(cid, today, couple, img)
-    
-         
-      # elif is_selected:
-      #   msg = await message.reply_text("𝐆ᴇᴛᴛɪɴɢ 𝐓ᴏᴅᴀʏs 𝐂ᴏᴜᴘʟᴇs 𝐈ᴍᴀɢᴇ...")
-      #   b = await _get_image(cid)
-       #  c1_id = int(is_selected["c1_id"])
-       #  c2_id = int(is_selected["c2_id"])
-       #  c1_name = (await app.get_users(c1_id)).first_name
-        # c2_name = (await app.get_users(c2_id)).first_name
-         
-      #   TXT = f"""
-#**𝐓ᴏᴅᴀʏ's 𝐒ᴇʟᴇᴄᴛᴇᴅ 𝐂ᴏᴜᴘʟᴇs 🎉 :
-#➖➖➖➖➖➖➖➖➖➖➖➖
-#[{c1_name}](tg://openmessage?user_id={c1_id}) + [{c2_name}](tg://openmessage?user_id={c2_id}) = ❣️
-#➖➖➖➖➖➖➖➖➖➖➖➖
-#𝐍ᴇxᴛ 𝐂ᴏᴜᴘʟᴇs 𝐖ɪʟʟ 𝐁ᴇ 𝐒ᴇʟᴇᴄᴛᴇᴅ 𝐎ɴ {tomorrow} !!**
-#"""
- #        await message.reply_photo(b, caption=TXT)
-        # await msg.delete()
+          
     except Exception as e:
         print(str(e))
     try:
