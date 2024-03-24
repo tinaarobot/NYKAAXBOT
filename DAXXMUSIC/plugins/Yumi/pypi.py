@@ -37,8 +37,8 @@ def pypi_info_command(client, message):
         
         if pypi_info:
             # Creating a message with PyPI information
-            info_message = f"๏ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ➠ {pypi_info['info']['name']}\n\n" \
-                           f"๏ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ ➠ {pypi_info['info']['version']}\n\n" \
+            info_message = f"๏ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ➠ `{pypi_info['info']['name']}`\n\n" \
+                           f"๏ ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ ➠ `{pypi_info['info']['version']}`\n\n" \
                            f"๏ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➠ {pypi_info['info']['summary']}\n\n" \
                            f"๏ ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ ➠ [ᴄʟɪᴄᴋ ʜᴇʀᴇ]({pypi_info['info']['project_urls']['Homepage']})"
             
