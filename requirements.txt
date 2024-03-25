@@ -52,5 +52,4 @@ async_pymongo
 cloudscraper
 pycryptodome
 opencv-python
-secureme
 bing_image_downloader==1.1.2
